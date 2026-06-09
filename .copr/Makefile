@@ -6,7 +6,7 @@ ARCHIVE := $(GIT_DIR).tar.gz
 SPEC_FILENAME := $(notdir $(spec))
 
 srpm: prepare
-	rpmbuild --undefine dist -bs rpmbuild/SPECS/$(SPEC_FILENAME)
+	rpmbuild --define "_topdir `pwd`/rpmbuild" --undefine dist -bs rpmbuild/SPECS/$(SPEC_FILENAME)
 	cp rpmbuild/SRPMS/* $(outdir)
 
 prepare: download
