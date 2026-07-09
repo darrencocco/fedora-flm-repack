@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name: flm
-Version: 0.9.43
+Version: 0.9.44
 Release: 1%{?dist}
 Summary: FastFlowLM for Ryzen AI NPU
 License: MIT and Proprietary
@@ -70,12 +70,14 @@ ln -s /opt/fastflowlm/bin/flm %{buildroot}%{_bindir}/flm
 
 %files
 %license LICENSE_RUNTIME.txt
-%license LICENSE_BINARY.txt
 %doc README.md
 /opt/fastflowlm
 %{_bindir}/flm
 
 %changelog
+* Wed Jul 08 2026 Darren Cocco <linux.fedora.packaging@darren.cocco.id.au> 0.9.44-1
+- Updated to 0.9.44
+
 * Mon Jun 01 2026 Darren Cocco <linux.fedora.packaging@darren.cocco.id.au> 0.9.43-1
 - Initial release
 
