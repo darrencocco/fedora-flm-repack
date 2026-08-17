@@ -16,7 +16,7 @@ prepare: download
 
 download:
 	dnf install -y git
-	git clone --recursive --branch v$(VERSION) https://github.com/FastFlowLM/FastFlowLM.git $(GIT_DIR)
+	git clone --recursive --branch v$(VERSION) https://github.com/ROCm/FastFlowLM.git $(GIT_DIR)
 	tar -czf $(ARCHIVE) $(GIT_DIR)
 
 clean:
