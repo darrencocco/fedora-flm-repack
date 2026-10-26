@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name: flm
-Version: 1.0.5
+Version: 1.0.10
 Release: 1%{?dist}
 Summary: FastFlowLM for Ryzen AI NPU
 License: MIT and Proprietary
@@ -32,6 +32,7 @@ BuildRequires: libdrm-devel
 BuildRequires: xrt-base-devel
 BuildRequires: readline-devel
 BuildRequires: ncurses-devel
+BuildRequires: libedit-devel
 
 Requires: boost
 Requires: curlpp
@@ -45,6 +46,7 @@ Requires: uuid
 Requires: libdrm
 Requires: readline
 Requires: ncurses
+Requires: libedit
 Requires: xrt-plugin-amdxdna
 
 %description
@@ -79,14 +81,18 @@ ln -s /opt/fastflowlm/bin/flm %{buildroot}%{_bindir}/flm
 %{_bindir}/flm
 
 %changelog
-* Tue Sep 15 2026 Darren Cocco<linux.fedora.packaging@darren.cocco.id.au> 1.0.5-1
-- Updated to 1.0.1
+* Mon Oct 26 2026 Darren Cocco <linux.fedora.packaging@darren.cocco.id.au> 1.0.10-1
+- Updated to 1.0.10
+- Moved to new official AMD upstream 2.27.0
 
-* Mon Aug 17 2026 Darren Cocco<linux.fedora.packaging@darren.cocco.id.au> 1.0.1-1
-- Updated to 1.0.1
-- Moved to new official AMD upstream
+* Tue Sep 15 2026 Darren Cocco <linux.fedora.packaging@darren.cocco.id.au> 1.0.5-1
+- Updated to 1.0.5
 
-* Sun Jul 12 2026 Darren Cocco<linux.fedora.packaging@darren.cocco.id.au> 0.9.45-1
+* Mon Aug 17 2026 Darren Cocco <linux.fedora.packaging@darren.cocco.id.au> 1.0.1-1
+- Updated to 1.0.1
+- Moved to new official AMD upstream 2.26.0
+
+* Sun Jul 12 2026 Darren Cocco <linux.fedora.packaging@darren.cocco.id.au> 0.9.45-1
 - Updated to 0.9.45
 
 * Wed Jul 08 2026 Darren Cocco <linux.fedora.packaging@darren.cocco.id.au> 0.9.44-1
